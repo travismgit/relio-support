@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relio Markdown Viewer — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Relio Markdown Viewer. Relio collects no data.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #55555c;
+    --ink-faint: #86868b;
+    --rule: #d8d8dd;
+    --rule-soft: #ebebef;
+    --accent: #0066cc;
+    --panel: #f6f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1a1c;
+      --ink: #e8e8ed;
+      --ink-soft: #a8a8b0;
+      --ink-faint: #7c7c85;
+      --rule: #3a3a3e;
+      --rule-soft: #2c2c30;
+      --accent: #4da3ff;
+      --panel: #242428;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 6rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header { padding: 4rem 0 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.5rem; }
+  h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+  .tagline { color: var(--ink-soft); margin: 0; }
+  h2 {
+    font-size: 1.25rem; letter-spacing: -0.01em; margin: 2.75rem 0 .75rem;
+    padding-bottom: .4rem; border-bottom: 1px solid var(--rule-soft);
+  }
+  a { color: var(--accent); }
+  code {
+    font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--panel); border-radius: 4px; padding: .1em .35em;
+  }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+    color: var(--ink-faint); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="tagline">Relio Markdown Viewer — last updated 22 October 2026</p>
+  </header>
+
+  <h2>Relio collects no data</h2>
+  <p>
+    Relio does not collect, transmit, store or share any personal information.
+    There is no account, no sign-in, no analytics, no telemetry, no crash
+    reporting and no update check.
+  </p>
+
+  <h2>It makes no network connections</h2>
+  <p>
+    Relio works entirely offline. Every library it uses — the Markdown parser,
+    the diagram renderer, the syntax highlighter — is compiled into the
+    application itself and runs on your Mac.
+  </p>
+  <p>
+    The app does request the <code>com.apple.security.network.client</code>
+    entitlement. This is a technical requirement of the system component Relio
+    uses to draw documents (<code>WKWebView</code>), which fails to launch
+    without it. Relio itself contacts no servers, and the documents you open are
+    never uploaded anywhere.
+  </p>
+
+  <h2>Your documents stay yours, and stay unchanged</h2>
+  <p>
+    Relio is a reader. It opens Markdown files read-only and has no code path
+    that writes to them — macOS marks its windows “Locked” to reflect this.
+  </p>
+  <p>
+    Files are only ever read when you open them, or when you preview them in
+    Finder. Nothing is indexed, copied or retained after you close the window.
+  </p>
+  <p>
+    The one exception is export, which you have to ask for: choosing Export
+    opens a save panel and writes a PDF or HTML copy to the location you
+    choose, and nowhere else.
+  </p>
+
+  <h2>What is stored on your Mac</h2>
+  <p>
+    Your chosen theme, appearance and text size are saved in the app's own
+    preferences on your Mac. They never leave it.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy:
+    <a href="mailto:relio_support@icloud.com">relio_support@icloud.com</a>
+  </p>
+
+  <footer>
+    <a href="./">Support</a> — Copyright © 2026 Travis Martino.
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relio Markdown Viewer — Support</title>
+<meta name="description" content="Support and documentation for Relio Markdown Viewer, a read-only Markdown reader for macOS.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #55555c;
+    --ink-faint: #86868b;
+    --rule: #d8d8dd;
+    --rule-soft: #ebebef;
+    --accent: #0066cc;
+    --panel: #f6f6f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1a1c;
+      --ink: #e8e8ed;
+      --ink-soft: #a8a8b0;
+      --ink-faint: #7c7c85;
+      --rule: #3a3a3e;
+      --rule-soft: #2c2c30;
+      --accent: #4da3ff;
+      --panel: #242428;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 6rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  header { padding: 4rem 0 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.5rem; }
+  h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+  .tagline { color: var(--ink-soft); margin: 0; }
+  h2 {
+    font-size: 1.25rem; letter-spacing: -0.01em; margin: 2.75rem 0 .75rem;
+    padding-bottom: .4rem; border-bottom: 1px solid var(--rule-soft);
+  }
+  p, li { color: var(--ink); }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--rule-soft); }
+  th { color: var(--ink-soft); font-weight: 600; }
+  kbd {
+    font: .9em ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--panel); border: 1px solid var(--rule-soft);
+    border-radius: 4px; padding: .1em .4em; white-space: nowrap;
+  }
+  .note {
+    background: var(--panel); border-left: 3px solid var(--rule);
+    padding: .85rem 1rem; margin: 1.25rem 0; color: var(--ink-soft); font-size: .95rem;
+  }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+    color: var(--ink-faint); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Relio Markdown Viewer</h1>
+    <p class="tagline">A read-only Markdown reader for macOS. Support and documentation.</p>
+  </header>
+
+  <h2>Contact</h2>
+  <p>
+    Questions, bug reports and feature requests:
+    <a href="mailto:relio_support@icloud.com">relio_support@icloud.com</a>
+  </p>
+  <p>
+    It helps to include your macOS version and, if a specific document renders
+    wrongly, the document itself or a small excerpt that reproduces it.
+  </p>
+
+  <h2>Requirements</h2>
+  <p>macOS 13 or later. Relio is a universal app and runs natively on both Apple silicon and Intel Macs.</p>
+
+  <h2>Opening documents</h2>
+  <p>
+    Relio opens Markdown files — <code>.md</code>, <code>.markdown</code>,
+    <code>.mdown</code>, <code>.mkd</code>, <code>.mdtext</code> and
+    <code>.qmd</code>. Use <strong>File → Open</strong>, double-click a file in
+    Finder, or drag one onto the app icon.
+  </p>
+  <p>
+    There is no account and no sign-in. Relio cannot modify your documents: it
+    has no save command and no code that writes to the file you are reading, and
+    macOS labels its windows <em>Locked</em> to reflect that.
+  </p>
+
+  <h2>Making Relio the default for Markdown</h2>
+  <p>
+    Relio offers itself as an <em>alternate</em> handler so it never takes
+    <code>.md</code> away from your editor. To make it the default: right-click
+    any Markdown file in Finder → <strong>Get Info</strong> → <strong>Open
+    with</strong> → Relio → <strong>Change All…</strong>
+  </p>
+
+  <h2>Finder previews (Quick Look)</h2>
+  <p>
+    Select a Markdown file in Finder and press the space bar. Relio renders the
+    document rather than showing raw text.
+  </p>
+  <div class="note">
+    <strong>If the preview looks like plain text:</strong> macOS picks the
+    preview provider belonging to the file type's default handler, so Relio's
+    preview only appears once Markdown is bound to Relio. Use the
+    <strong>Get Info → Open With → Change All…</strong> steps above, then press
+    space again. If another Markdown preview app is installed, turn it off in
+    <strong>System Settings → General → Login Items &amp; Extensions → Quick
+    Look</strong>.
+  </div>
+
+  <h2>Keyboard shortcuts</h2>
+  <table>
+    <tr><th>Action</th><th>Shortcut</th></tr>
+    <tr><td>Find, with live match counts</td><td><kbd>⌘F</kbd></td></tr>
+    <tr><td>Next / previous match</td><td><kbd>⌘G</kbd> / <kbd>⇧⌘G</kbd></td></tr>
+    <tr><td>Settings — theme, appearance, text size</td><td><kbd>⌘,</kbd></td></tr>
+    <tr><td>Next / previous theme</td><td><kbd>⌥⌘]</kbd> / <kbd>⌥⌘[</kbd></td></tr>
+    <tr><td>Bigger / smaller / actual size</td><td><kbd>⌘+</kbd> / <kbd>⌘−</kbd> / <kbd>⌘0</kbd></td></tr>
+    <tr><td>Show or hide the outline</td><td><kbd>⌃⌘S</kbd></td></tr>
+    <tr><td>Print</td><td><kbd>⌘P</kbd></td></tr>
+    <tr><td>Close window / close all</td><td><kbd>⌘W</kbd> / <kbd>⌥⌘W</kbd></td></tr>
+  </table>
+
+  <h2>Exporting</h2>
+  <p>
+    <strong>File → Export → PDF…</strong> or <strong>HTML…</strong> asks where to
+    save. The PDF is one continuous page rendered from the document; for paper
+    pages use <kbd>⌘P</kbd> and <strong>Save as PDF</strong> from the print
+    dialog, which applies the print stylesheet. Exported HTML is a single
+    self-contained file with your theme included and no external assets.
+  </p>
+
+  <h2>What Relio renders</h2>
+  <p>
+    GitHub-Flavored Markdown, tables with numeric columns aligned automatically,
+    Mermaid diagrams, syntax highlighting across 36 languages, footnotes, task
+    lists, and YAML frontmatter stripped rather than printed. Everything runs on
+    your Mac; Relio makes no network requests.
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    Relio collects no data of any kind. See the
+    <a href="privacy.html">privacy policy</a>.
+  </p>
+
+  <footer>
+    Relio Markdown Viewer — Copyright © 2026 Travis Martino.
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
